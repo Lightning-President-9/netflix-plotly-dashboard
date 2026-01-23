@@ -1,21 +1,27 @@
-function loadChart(divId, jsonPath) {
-  fetch(jsonPath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${jsonPath}`);
-      }
-      return response.json();
-    })
-    .then(fig => {
-      Plotly.newPlot(divId, fig.data, fig.layout, {
-        responsive: true,
-        displayModeBar: false
-      });
-    })
-    .catch(error => console.error(error));
+async function loadChart(containerId, jsonPath) {
+    try {
+        const response = await fetch(jsonPath);
+
+        if (!response.ok) {
+            throw new Error(`HTTP ${response.status} - ${jsonPath} not found`);
+        }
+
+        const fig = await response.json();
+
+        Plotly.newPlot(
+            containerId,
+            fig.data,
+            fig.layout,
+            { responsive: true }
+        );
+    } catch (error) {
+        console.error("Chart load error:", error.message);
+        document.getElementById(containerId).innerHTML =
+            "<p style='color:red;text-align:center;'>Chart failed to load</p>";
+    }
 }
 
-// Load all 8 charts
+/* Load all Netflix charts */
 loadChart("chart1", "./charts/01_category_distribution.json");
 loadChart("chart2", "./charts/02_yearly_trend.json");
 loadChart("chart3", "./charts/03_top_genres.json");
