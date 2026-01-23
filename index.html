@@ -1,52 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Netflix Data Analysis Dashboard</title>
-  <link rel="icon" href="head-logo.png">
+    <meta charset="UTF-8">
+    <title>Netflix Data Analysis – Visualization Dashboard</title>
+    <link rel="icon" href="head-logo.png">
 
-  <!-- Plotly -->
-  <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Netflix Data Analysis Dashboard</h1>
-
-    <p style="font-size: 14px; margin-top: 4px;">
-      Main GitHub Repository:
-      <a
-        href="https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar"
-        target="_blank"
-      >
-        VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar
-      </a>
+<header>
+    <h1>Netflix Data Analysis – Interactive Visualization Dashboard</h1>
+    <p>
+        Data analysis and visualization using Plotly (Static Deployment)
     </p>
 
-    <p style="font-size: 14px; margin-top: 6px;">
-      Live Deployment:
-      <a href="https://netflix-plotly-dashboard.onrender.com/" target="_blank">
-        netflix-plotly-dashboard.onrender.com
-      </a>
-    </p>
+    <div class="links">
+        <a href="https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar" target="_blank">
+            Main GitHub Repository
+        </a>
+        <a href="https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar/blob/main/Rohit_Wachnekar_Netflix_Data_Analysis.ipynb" target="_blank">
+            Jupyter Notebook
+        </a>
+        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">
+            Dataset (Kaggle)
+        </a>
+        <a href="https://netflix-plotly-dashboard.onrender.com/" target="_blank">
+            Live Deployment
+        </a>
+    </div>
+</header>
 
-    <p style="font-size: 14px; margin-top: 4px;">
-      Dataset:
-      <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank">
-        Kaggle – Netflix Movies and TV Shows
-      </a>
-      |
-      Analysis Notebook:
-      <a href="https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar/blob/main/Rohit_Wachnekar_Netflix_Data_Analysis.ipynb" target="_blank">
-        Jupyter Notebook
-      </a>
-    </p>
-  </header>
-
-  <main class="dashboard">
+<main class="dashboard">
     <div class="chart" id="chart1"></div>
     <div class="chart" id="chart2"></div>
     <div class="chart" id="chart3"></div>
@@ -55,12 +43,12 @@
     <div class="chart" id="chart6"></div>
     <div class="chart" id="chart7"></div>
     <div class="chart" id="chart8"></div>
-  </main>
+</main>
 
-  <!-- JS -->
-  <script src="script.js"></script>
+<footer>
+    <p>Netflix Data Analysis Dashboard</p>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>
-
-
