@@ -1,152 +1,69 @@
-# Netflix Data Analysis Dashboard
+# Netflix Data Visualization Dashboard
 
-A complete end-to-end data analytics and visualization project built using Python and Plotly, culminating in a fully static, production-ready interactive dashboard.
+A static, interactive data visualization dashboard built using **Plotly** to explore trends and patterns in the Netflix Movies and TV Shows dataset.
 
-This project is developed as part of the **VOIS – AICTE Major Project (October 2025)**.
+This project demonstrates how exploratory data analysis can be converted into reusable, production-ready visualizations using Plotly JSON files and static hosting.
 
 ---
 
-## Live Dashboard
+## Project Links
 
-The project is deployed and publicly accessible at:
+- **Main GitHub Repository**  
+  https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar
 
-https://netflix-plotly-dashboard.onrender.com/
+- **Jupyter Notebook (Analysis & Chart Generation)**  
+  https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar/blob/main/Rohit_Wachnekar_Netflix_Data_Analysis.ipynb
 
-The dashboard is fully static and hosted on **Render**, requiring no backend services.
+- **Dataset (Kaggle – Netflix Movies and TV Shows)**  
+  https://www.kaggle.com/datasets/shivamb/netflix-shows
+
+- **Live Deployment**  
+  https://netflix-plotly-dashboard.onrender.com/
 
 ---
 
 ## Project Overview
 
-Netflix hosts a vast collection of movies and TV shows across genres, countries, and time periods.  
-This project analyzes Netflix’s catalog to extract meaningful insights and trends using data analytics and visualization techniques.
+This dashboard visualizes Netflix content data using **Plotly Express** and renders the charts statically using **Plotly.js**.
 
-The workflow includes:
-1. Data collection and cleaning  
-2. Exploratory Data Analysis (EDA)  
-3. Visualization using Plotly  
-4. Exporting visualizations as JSON  
-5. Rendering charts in a static web dashboard  
+Key characteristics:
+- No backend required
+- Fully static hosting (Render)
+- Reusable Plotly JSON charts
+- Responsive and interactive UI
 
 ---
 
-## Objectives
+## Visualizations Included
 
-- Analyze Netflix content distribution (Movies vs TV Shows)
-- Identify year-wise trends in Netflix content growth
-- Discover popular genres, countries, and directors
-- Study ratings distribution
-- Analyze movie durations and TV show seasons
-- Deploy a backend-free interactive dashboard
-
----
-
-## Dashboard Features
-
-The dashboard contains **8 interactive Plotly charts**:
-
-1. Category Distribution (Movies vs TV Shows)
-2. Year-wise Content Trend
-3. Top Genres on Netflix
-4. Top Producing Countries
-5. Ratings Distribution
-6. Movie Duration Histogram
-7. TV Show Seasons Distribution
-8. Top Directors by Content Count
-
-All charts are responsive and dynamically loaded from JSON files.
+1. Content Category Distribution  
+2. Year-wise Content Trend  
+3. Top Genres  
+4. Top Producing Countries  
+5. Ratings Distribution  
+6. Movie Duration Distribution  
+7. TV Show Seasons Distribution  
+8. Top Directors  
 
 ---
 
-## Data Analysis Notebook
+## Repository Structure
 
-All data preprocessing, analysis, and visualization logic is implemented in the Jupyter Notebook below:
-
-Jupyter Notebook  
-https://github.com/Lightning-President-9/VOIS_AICTE_Oct2025_MajorProject_Rohit_Wachnekar/blob/main/Rohit_Wachnekar_Netflix_Data_Analysis.ipynb
-
-The notebook:
-- Cleans and preprocesses the dataset
-- Performs exploratory data analysis
-- Generates Plotly visualizations
-- Exports figures as `.json` files
-
----
-
-## Dataset Information
-
-- **Dataset Name:** Netflix Movies and TV Shows  
-- **Source:** Kaggle  
-- **URL:** https://www.kaggle.com/datasets/shivamb/netflix-shows  
-
-Dataset attributes include:
-- Title
-- Type (Movie / TV Show)
-- Director
-- Cast
-- Country
-- Release Year
-- Rating
-- Duration
-- Listed Genres
-
----
-
-## Deployment
-
-This dashboard is fully static and does not require Flask, APIs, or databases.
-
-Supported platforms:
-- Render
-- GitHub Pages
-- Netlify
-- Vercel
-
-Deployment is done by serving `index.html` as the root file.
-
----
-
-## Technologies Used
-
-**Data Analysis**
-- Python
-- Pandas
-- NumPy
-
-**Visualization**
-- Plotly
-
-**Frontend**
-- HTML5
-- CSS3
-- JavaScript
-
-**Tools**
-- Jupyter Notebook
-- GitHub
-- Render
-
----
-
-## Methodology
-
-1. Data acquisition from Kaggle  
-2. Data cleaning and preprocessing  
-3. Exploratory Data Analysis  
-4. Visualization using Plotly  
-5. Exporting charts as JSON  
-6. Static rendering using JavaScript  
-7. Deployment on Render  
-
----
-
-## Results & Insights
-
-- Movies dominate Netflix’s content catalog
-- Rapid growth in content after 2015
-- Drama and international genres are most common
-- USA and India are major content contributors
-- Most TV shows have 1–2 seasons
-- Certain directors appear frequently across titles
-
----
+```text
+netflix-data-visualization-dashboard/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+├── charts/
+│   ├── 01_category_distribution.json
+│   ├── 02_yearly_trend.json
+│   ├── 03_top_genres.json
+│   ├── 04_top_countries.json
+│   ├── 05_ratings_distribution.json
+│   ├── 06_movie_duration_hist.json
+│   ├── 07_tv_seasons_distribution.json
+│   └── 08_top_directors.json
+│
+└── README.md
