@@ -8,6 +8,10 @@ async function loadChart(containerId, jsonPath) {
 
         const fig = await response.json();
 
+        fig.layout.paper_bgcolor = "#181818";
+        fig.layout.plot_bgcolor = "#181818";
+        fig.layout.font = { color: "#ffffff" };
+        
         Plotly.newPlot(
             containerId,
             fig.data,
